@@ -200,10 +200,10 @@ namespace FTPTest
 			serverTb.Text = IniHelper.Read(SYS, SERVER, "");
 			userTb.Text = IniHelper.Read(SYS, USER, "");
 			pwdTb.Text = IniHelper.Read(SYS, PWD, "");
-			IsUnix = IniHelper.Read(SYS, IS_UNIX, "1").Equals("1") ? true : false;
-			IsUTF8 = IniHelper.Read(SYS, UTF8, "0").Equals("0") ? false : true;
-			IsPassive = IniHelper.Read(SYS, PASSIVE, "1").Equals("1") ? true : false;
-			IsAlive = IniHelper.Read(SYS, ALIVE, "0").Equals("0") ? false : true;
+			IsUnix = IniHelper.Read(SYS, IS_UNIX, "1").Equals("1");
+			IsUTF8 = !IniHelper.Read(SYS, UTF8, "0").Equals("0");
+			IsPassive = IniHelper.Read(SYS, PASSIVE, "1").Equals("1");
+			IsAlive = !IniHelper.Read(SYS, ALIVE, "0").Equals("0");
 			if (IsUnix)
 			{
 				fileInfoMode.Text = "UNIX";

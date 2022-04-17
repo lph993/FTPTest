@@ -106,7 +106,7 @@ namespace FCS.Helper
                 reqFTP.Credentials = new NetworkCredential(ftpUserID, ftpPassword);
                 reqFTP.Method = WebRequestMethods.Ftp.UploadFile;
                 reqFTP.KeepAlive = MyKeepAlive;
-                reqFTP.UseBinary = true;
+                reqFTP.UseBinary = true;//使用二进制传输数据
                 reqFTP.UsePassive = MyUsePassive;
                 reqFTP.ContentLength = fileInf.Length;
                 ServicePointManager.DefaultConnectionLimit = 50;
@@ -238,7 +238,7 @@ namespace FCS.Helper
                 reqFTP.Credentials = new NetworkCredential(ftpUserID, ftpPassword);
                 reqFTP.Method = WebRequestMethods.Ftp.DeleteFile;
                 reqFTP.KeepAlive = MyKeepAlive;
-                string result = String.Empty;
+                string result = string.Empty;
                 response = (FtpWebResponse)reqFTP.GetResponse();
                 long size = response.ContentLength;
                 datastream = response.GetResponseStream();
