@@ -126,9 +126,7 @@
     <None Include="Resources\none.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images\FTP测试.png" />
     <Content Include="image_d_icon.ico" />
-    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
